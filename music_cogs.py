@@ -13,21 +13,23 @@ def run():
     @bot.event 
     async def on_ready():
         await utils.load_videocmds(bot)
-
-        await bot.load_extension("cogs.music_bot")
+        await bot.load_extension("cogs.music")
 
 
     @bot.command()
     async def load(ctx, cog: str):
         await bot.load_extension(f"cogs.{cog.lower()}")
+        await ctx.send("Success")
         
     @bot.command()
     async def unload(ctx, cog: str):
         await bot.unload_extension(f"cogs.{cog.lower()}")
-        
+        await ctx.send("Success")
     @bot.command()
     async def reload(ctx, cog: str):
         await bot.reload_extension(f"cogs.{cog.lower()}")
+        await ctx.send("Success")
+
         
     bot.run(settings.DISCORD_API_SECRET, root_logger=True)
 

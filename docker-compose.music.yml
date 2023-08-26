@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.7.8'
 
 services:
   lavalink:
@@ -7,3 +7,4 @@ services:
       - ./lavalink/application.yml:/opt/Lavalink/application.yml
     ports:
       - "2333:2333"
+

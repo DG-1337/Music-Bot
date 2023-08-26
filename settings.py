@@ -7,7 +7,7 @@ import discord
 
 load_dotenv()
 
-DISCORD_API_SECRET = os.getenv("TOKEN")
+DISCORD_API_SECRET = os.getenv("BOT_TOKEN")
 
 LAVA_LINK_PASSWORD = os.getenv("PASSWORD")
 

@@ -1,0 +1,23 @@
+INFO       - 2023-08-26 16:16:21,691 - client          : logging in using static token
+INFO       - 2023-08-26 16:16:22,218 - gateway         : Shard ID None has connected to Gateway (Session ID: e0a688e1f06d991d8c76e3818d42d848).
+ERROR      - 2023-08-26 16:20:19,204 - bot             : Ignoring exception in command play
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 38, in play
+    bot_vc = discord.utils.get(self.bot.voice_vclients, guild = ctx.guild)
+                               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Bot' object has no attribute 'voice_vclients'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: 'Bot' object has no attribute 'voice_vclients'
