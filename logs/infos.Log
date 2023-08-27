@@ -1,2 +1,4 @@
-INFO       - 2023-08-26 18:59:47,320 - client          : logging in using static token
-INFO       - 2023-08-26 18:59:49,017 - gateway         : Shard ID None has connected to Gateway (Session ID: 346f527fec6c36d013ddc963bf780fd3).
+INFO       - 2023-08-26 21:39:28,143 - client          : logging in using static token
+INFO       - 2023-08-26 21:39:29,663 - gateway         : Shard ID None has connected to Gateway (Session ID: 552195df68654615da837802bb7fc833).
+ERROR      - 2023-08-26 21:39:52,069 - bot             : Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "play" is not found
