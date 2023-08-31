@@ -6,6 +6,7 @@ import wavelink
 
 logger = settings.logging.getLogger(__name__)
 
+# commands for music bot 
 class MusicBot(commands.Cog):
 
     # track = None
@@ -15,8 +16,8 @@ class MusicBot(commands.Cog):
         self.queue = wavelink.Queue()
         self.vc : wavelink.Player = None
         self.node: wavelink.Node = None
+        self.track: wavelink.YouTubeTrack = None
       
-
     # used to connect to lavalink
     async def setup(self):
         self.node = wavelink.Node(uri='http://localhost:2333', password='changeme')
@@ -32,61 +33,72 @@ class MusicBot(commands.Cog):
 
     @commands.hybrid_command(brief="Joins user's voice channel")
     async def join(self, ctx):
-        channel = ctx.message.author.voice.channel
-        self.music_channel = ctx.message.channel
-        if not channel:
-            await ctx.send(f"You need to join a voice channel first.")
-            return 
-        self.vc = await channel.connect(cls=wavelink.Player)
-        await ctx.send(f"Joined {channel}", ephemeral=True)
+        try:
+            channel = ctx.message.author.voice.channel
+
+        except AttributeError:
+            await ctx.send(f"You need to be in a Vocie Channel to use  the `play` command", ephemeral=True)
+
+        else:
+            self.music_channel = ctx.message.channel
+            self.vc = await channel.connect(cls=wavelink.Player)
+            await ctx.send(f"Joined {channel}", ephemeral=True)
 
 
-    @commands.hybrid_command(name="p")
+    @commands.hybrid_command(name="play", brief="Plays songs from YouTube")
     async def play(self, ctx: commands.Context, *, search: str) -> None:
         if not ctx.voice_client:
-            self.vc = await ctx.author.voice.channel.connect(cls=wavelink.Player)
+            await ctx.invoke(self.bot.get_command('join'))
         else:
             self.vc = ctx.voice_client
     
-        tracks: list[wavelink.YouTubeTrack] = await wavelink.YouTubeTrack.search(search)
-        if not tracks:
-            await ctx.send(f'It was not possible to find the song: `{search}`')
-            return
-    
-        track: wavelink.YouTubeTrack = tracks[0]
-        self.queue.put(track)
-        self.music_channel = ctx.message.channel  # define music_channel here
-
+        self.track = await wavelink.YouTubeTrack.search(search, return_first=True)
+        if not self.track:
+            return await ctx.send(f'Could not find: `{search}`')
+        
+        self.queue.put(self.track)
+        self.music_channel = ctx.message.channel 
         if not self.vc.is_playing():
             await self.play_next_track()
-        else:
-            await ctx.send(f"{track.title}, has been added")
+            video_url = url= await self.track.fetch_thumbnail()
+            embed = discord.Embed(title=f"`{self.track}` by `{self.track.author}`")
+            embed.set_image(url=video_url)
+            await ctx.send(embed=embed)
 
+        else:
+            await ctx.send(f"`{self.track}` has been added to the queue")
 
     async def play_next_track(self):
         if not self.queue.is_empty:
             next_track = self.queue.get()
             await self.vc.play(next_track)
-            await self.music_channel.send(f"{next_track}, has been added to the queue")
-            
 
-    @commands.hybrid_command(name="pause", desctription="Stops current track")
+            video_url = url= await self.track.fetch_thumbnail()
+            embed = discord.Embed(title=f"`{self.track}` by `{self.track.author}`")
+            embed.set_image(url=video_url)
+            await self.music_channel.send(embed=embed)
+
+    @commands.hybrid_command(name="pause", description="Stops current track")
     async def pause(self, ctx):
+        if self.vc.is_playing == False:
+            return await self.music_channel(f"0 tracks are playing")
         await self.vc.pause()
         await ctx.send(f"Paused Current track", ephemeral=True)
 
     @commands.hybrid_command(name="resume", desctription="Resumes current track")
     async def resume(self, ctx):
+        if self.vc.is_playing == False:
+            return await self.music_channel(f"0 tracks are playing")       
         await self.vc.resume()
-        await ctx.send(f"Paused Current track", ephemeral=True)
+        await ctx.send(f"Resumed Current track", ephemeral=True)
 
     @commands.hybrid_command(name="disconnect", desctription="Disconnects bot from current vc")
     async def disconnect(self, ctx):
         await self.vc.disconnect()
-        await ctx.send(f"Paused Current track", ephemeral=True)
+        await ctx.send(f"Disconected", ephemeral=True)
 
     @commands.hybrid_command(name="skip")
-    async def skip(self, ctx: commands.Context) -> None:
+    async def skip(self, ctx) -> None:
         vc: wavelink.Player = ctx.voice_client
         if not self.queue.is_empty:
             await vc.stop()
@@ -97,6 +109,10 @@ class MusicBot(commands.Cog):
         elif self.vc.is_playing() == True:
             await vc.stop()
             await ctx.send(f"Stopped current song")
+
+        else:
+            ctx.send("No song is currently playing")
+        
 
 async def setup(bot):
     music_bot = MusicBot(bot)

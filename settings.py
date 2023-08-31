@@ -9,7 +9,6 @@ load_dotenv()
 
 DISCORD_API_SECRET = os.getenv("BOT_TOKEN")
 LAVA_LINK_PASSWORD = os.getenv("PASSWORD")
-GUILD_ID = int(os.getenv("GUILD"))
 
 BASE_DIR = pathlib.Path(__file__).parent
 
