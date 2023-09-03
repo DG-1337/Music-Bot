@@ -1,2 +1,2 @@
-# Music-
-Minimal Discord Music Bot using wavelink and lavalink
+# Music-Bot
+Minimal Discord Music Bot using Wavelink and lavalink
