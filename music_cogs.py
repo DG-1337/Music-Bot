@@ -18,6 +18,7 @@ def run():
         synced = await bot.tree.sync()
         logger.info(f"Synced {len(synced)}, command(s)")
 
+    # loads, unloads, and reloads music.py file
     @bot.command()
     async def load(ctx, cog: str):
         await bot.load_extension(f"cogs.{cog.lower()}")

@@ -1,2 +1,1195 @@
-INFO       - 2023-08-30 22:20:26,368 - client          : logging in using static token
-INFO       - 2023-08-30 22:20:26,943 - gateway         : Shard ID None has connected to Gateway (Session ID: 1f34a7b59872181ac8cd0919b7d7d26a).
+INFO       - 2023-08-31 18:26:28,160 - client          : logging in using static token
+INFO       - 2023-08-31 18:26:28,809 - gateway         : Shard ID None has connected to Gateway (Session ID: 03c7ea1cf5b4f83546d81f097b42f32e).
+ERROR      - 2023-08-31 18:26:58,841 - bot             : Ignoring exception in command play
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 84, in play
+    if not self.vc.is_playing():
+           ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'is_playing'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: AttributeError: 'NoneType' object has no attribute 'is_playing'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'play' raised an exception: AttributeError: 'NoneType' object has no attribute 'is_playing'
+ERROR      - 2023-08-31 18:27:32,391 - bot             : Ignoring exception in command play
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 85, in play
+    await self.play_next_track()
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 92, in play_next_track
+    msg = await self.music_channel.send(view=view)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/abc.py", line 1545, in send
+    with handle_message_parameters(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/http.py", line 188, in handle_message_parameters
+    payload['components'] = view.to_components()
+                            ^^^^^^^^^^^^^^^^^^^^
+TypeError: View.to_components() missing 1 required positional argument: 'self'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: TypeError: View.to_components() missing 1 required positional argument: 'self'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'play' raised an exception: TypeError: View.to_components() missing 1 required positional argument: 'self'
+ERROR      - 2023-08-31 18:30:15,351 - bot             : Ignoring exception in command play
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 85, in play
+    await self.play_next_track()
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 92, in play_next_track
+    msg = await self.music_channel.send(view=view)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/abc.py", line 1545, in send
+    with handle_message_parameters(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/http.py", line 188, in handle_message_parameters
+    payload['components'] = view.to_components()
+                            ^^^^^^^^^^^^^^^^^^^^
+TypeError: View.to_components() missing 1 required positional argument: 'self'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: TypeError: View.to_components() missing 1 required positional argument: 'self'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'play' raised an exception: TypeError: View.to_components() missing 1 required positional argument: 'self'
+ERROR      - 2023-08-31 18:35:32,692 - bot             : Ignoring exception in command play
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 85, in play
+    await self.play_next_track()
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 92, in play_next_track
+    msg = await self.music_channel.send(view=view)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/abc.py", line 1545, in send
+    with handle_message_parameters(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/http.py", line 188, in handle_message_parameters
+    payload['components'] = view.to_components()
+                            ^^^^^^^^^^^^^^^^^^^^
+TypeError: View.to_components() missing 1 required positional argument: 'self'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: TypeError: View.to_components() missing 1 required positional argument: 'self'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'play' raised an exception: TypeError: View.to_components() missing 1 required positional argument: 'self'
+ERROR      - 2023-08-31 18:35:58,102 - bot             : Ignoring exception in command play
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 85, in play
+    await self.play_next_track()
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 92, in play_next_track
+    msg = await self.music_channel.send(view=view)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/abc.py", line 1545, in send
+    with handle_message_parameters(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/http.py", line 188, in handle_message_parameters
+    payload['components'] = view.to_components()
+                            ^^^^^^^^^^^^^^^^^^^^
+TypeError: View.to_components() missing 1 required positional argument: 'self'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: TypeError: View.to_components() missing 1 required positional argument: 'self'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'play' raised an exception: TypeError: View.to_components() missing 1 required positional argument: 'self'
+ERROR      - 2023-08-31 18:36:09,285 - bot             : Ignoring exception in command play
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 85, in play
+    await self.play_next_track()
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 92, in play_next_track
+    msg = await self.music_channel.send(view=view)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/abc.py", line 1545, in send
+    with handle_message_parameters(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/http.py", line 188, in handle_message_parameters
+    payload['components'] = view.to_components()
+                            ^^^^^^^^^^^^^^^^^^^^
+TypeError: View.to_components() missing 1 required positional argument: 'self'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: TypeError: View.to_components() missing 1 required positional argument: 'self'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'play' raised an exception: TypeError: View.to_components() missing 1 required positional argument: 'self'
+ERROR      - 2023-08-31 18:36:20,443 - bot             : Ignoring exception in command play
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 85, in play
+    await self.play_next_track()
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 92, in play_next_track
+    msg = await self.music_channel.send(view=view)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/abc.py", line 1545, in send
+    with handle_message_parameters(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/http.py", line 188, in handle_message_parameters
+    payload['components'] = view.to_components()
+                            ^^^^^^^^^^^^^^^^^^^^
+TypeError: View.to_components() missing 1 required positional argument: 'self'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'play' raised an exception: TypeError: View.to_components() missing 1 required positional argument: 'self'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/app_commands/commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'play' raised an exception: TypeError: View.to_components() missing 1 required positional argument: 'self'
+ERROR      - 2023-08-31 18:36:37,843 - bot             : Ignoring exception in command reload
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/music_cogs.py", line 33, in reload
+    await bot.reload_extension(f"cogs.{cog.lower()}")
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1102, in reload_extension
+    raise errors.ExtensionNotLoaded(name)
+discord.ext.commands.errors.ExtensionNotLoaded: Extension 'cogs.musi' has not been loaded.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ExtensionNotLoaded: Extension 'cogs.musi' has not been loaded.
+ERROR      - 2023-08-31 18:39:01,008 - bot             : Ignoring exception in command reload
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/music_cogs.py", line 33, in reload
+    await bot.reload_extension(f"cogs.{cog.lower()}")
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1102, in reload_extension
+    raise errors.ExtensionNotLoaded(name)
+discord.ext.commands.errors.ExtensionNotLoaded: Extension 'cogs.muisc' has not been loaded.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ExtensionNotLoaded: Extension 'cogs.muisc' has not been loaded.
+ERROR      - 2023-08-31 18:39:04,272 - bot             : Ignoring exception in command reload
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 935, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 39, in <module>
+    class MusicBot(commands.Cog):
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 156, in MusicBot
+    @commands.hybrid_command()
+     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 893, in decorator
+    return HybridCommand(func, name=name, with_app_command=with_app_command, **attrs)  # type: ignore  # ???
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 503, in __init__
+    super().__init__(func, **kwargs)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 406, in __init__
+    self.callback = func
+    ^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 513, in callback
+    self.params: Dict[str, Parameter] = get_signature_parameters(function, globalns)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 130, in get_signature_parameters
+    raise TypeError(f'Command signature requires at least {required_params - 1} parameter(s)')
+TypeError: Command signature requires at least 1 parameter(s)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/music_cogs.py", line 33, in reload
+    await bot.reload_extension(f"cogs.{cog.lower()}")
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1117, in reload_extension
+    await self.load_extension(name)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1013, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 938, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.music' raised an error: TypeError: Command signature requires at least 1 parameter(s)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ExtensionFailed: Extension 'cogs.music' raised an error: TypeError: Command signature requires at least 1 parameter(s)
+ERROR      - 2023-08-31 18:39:10,613 - bot             : Ignoring exception in command reload
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 935, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 39, in <module>
+    class MusicBot(commands.Cog):
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 156, in MusicBot
+    @commands.hybrid_command()
+     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 893, in decorator
+    return HybridCommand(func, name=name, with_app_command=with_app_command, **attrs)  # type: ignore  # ???
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 503, in __init__
+    super().__init__(func, **kwargs)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 406, in __init__
+    self.callback = func
+    ^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 513, in callback
+    self.params: Dict[str, Parameter] = get_signature_parameters(function, globalns)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 130, in get_signature_parameters
+    raise TypeError(f'Command signature requires at least {required_params - 1} parameter(s)')
+TypeError: Command signature requires at least 1 parameter(s)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/music_cogs.py", line 33, in reload
+    await bot.reload_extension(f"cogs.{cog.lower()}")
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1117, in reload_extension
+    await self.load_extension(name)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1013, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 938, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.music' raised an error: TypeError: Command signature requires at least 1 parameter(s)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ExtensionFailed: Extension 'cogs.music' raised an error: TypeError: Command signature requires at least 1 parameter(s)
+ERROR      - 2023-08-31 18:39:20,340 - bot             : Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "buttons" is not found
+ERROR      - 2023-08-31 18:39:27,016 - bot             : Ignoring exception in command reload
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 935, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 39, in <module>
+    class MusicBot(commands.Cog):
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 156, in MusicBot
+    @commands.hybrid_command()
+     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 893, in decorator
+    return HybridCommand(func, name=name, with_app_command=with_app_command, **attrs)  # type: ignore  # ???
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 503, in __init__
+    super().__init__(func, **kwargs)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 406, in __init__
+    self.callback = func
+    ^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 513, in callback
+    self.params: Dict[str, Parameter] = get_signature_parameters(function, globalns)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 130, in get_signature_parameters
+    raise TypeError(f'Command signature requires at least {required_params - 1} parameter(s)')
+TypeError: Command signature requires at least 1 parameter(s)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/music_cogs.py", line 33, in reload
+    await bot.reload_extension(f"cogs.{cog.lower()}")
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1117, in reload_extension
+    await self.load_extension(name)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1013, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 938, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.music' raised an error: TypeError: Command signature requires at least 1 parameter(s)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ExtensionFailed: Extension 'cogs.music' raised an error: TypeError: Command signature requires at least 1 parameter(s)
+ERROR      - 2023-08-31 18:42:43,193 - bot             : Ignoring exception in command reload
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 935, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 39, in <module>
+    class MusicBot(commands.Cog):
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 156, in MusicBot
+    @commands.hybrid_command(name="button")
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 893, in decorator
+    return HybridCommand(func, name=name, with_app_command=with_app_command, **attrs)  # type: ignore  # ???
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/hybrid.py", line 503, in __init__
+    super().__init__(func, **kwargs)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 406, in __init__
+    self.callback = func
+    ^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 513, in callback
+    self.params: Dict[str, Parameter] = get_signature_parameters(function, globalns)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 130, in get_signature_parameters
+    raise TypeError(f'Command signature requires at least {required_params - 1} parameter(s)')
+TypeError: Command signature requires at least 1 parameter(s)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/music_cogs.py", line 33, in reload
+    await bot.reload_extension(f"cogs.{cog.lower()}")
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1117, in reload_extension
+    await self.load_extension(name)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1013, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 938, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.music' raised an error: TypeError: Command signature requires at least 1 parameter(s)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ExtensionFailed: Extension 'cogs.music' raised an error: TypeError: Command signature requires at least 1 parameter(s)
+ERROR      - 2023-08-31 18:45:07,635 - bot             : Ignoring exception in command reload
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 935, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/devgopal/Desktop/Music Bot/cogs/music.py", line 3, in <module>
+    from buttons import SimpleView
+ModuleNotFoundError: No module named 'buttons'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/music_cogs.py", line 33, in reload
+    await bot.reload_extension(f"cogs.{cog.lower()}")
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1117, in reload_extension
+    await self.load_extension(name)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1013, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 938, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.music' raised an error: ModuleNotFoundError: No module named 'buttons'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ExtensionFailed: Extension 'cogs.music' raised an error: ModuleNotFoundError: No module named 'buttons'
+ERROR      - 2023-08-31 18:45:33,997 - bot             : Ignoring exception in command reload
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/music_cogs.py", line 33, in reload
+    await bot.reload_extension(f"cogs.{cog.lower()}")
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1102, in reload_extension
+    raise errors.ExtensionNotLoaded(name)
+discord.ext.commands.errors.ExtensionNotLoaded: Extension 'cogs.musuic' has not been loaded.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1350, in invoke
+    await ctx.command.invoke(ctx)
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ExtensionNotLoaded: Extension 'cogs.musuic' has not been loaded.
+INFO       - 2023-08-31 19:49:21,907 - gateway         : Shard ID None has successfully RESUMED session 03c7ea1cf5b4f83546d81f097b42f32e.
+INFO       - 2023-08-31 22:46:04,470 - gateway         : Shard ID None has successfully RESUMED session 03c7ea1cf5b4f83546d81f097b42f32e.
+INFO       - 2023-09-01 02:25:37,098 - gateway         : Shard ID None session has been invalidated.
+ERROR      - 2023-09-01 02:55:05,646 - client          : Attempting a reconnect in 1.20s
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/http.py", line 537, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1178, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 980, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore[return-value]  # noqa
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1112, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 1145, in _create_connection_transport
+    await waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+TimeoutError
+INFO       - 2023-09-01 02:55:07,984 - gateway         : Shard ID None session has been invalidated.
+INFO       - 2023-09-01 02:55:14,375 - gateway         : Shard ID None has connected to Gateway (Session ID: 8b708a43eb8b421d071ea7265189a947).
+ERROR      - 2023-09-01 02:55:16,502 - client          : Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/Users/devgopal/Desktop/Music Bot/music_cogs.py", line 17, in on_ready
+    await bot.load_extension("cogs.music")
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1007, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'cogs.music' is already loaded.
+INFO       - 2023-09-01 03:01:52,140 - gateway         : Shard ID None session has been invalidated.
+INFO       - 2023-09-01 03:01:58,358 - gateway         : Shard ID None has connected to Gateway (Session ID: 3d643f623a10188a90bf70305b9c8f9c).
+ERROR      - 2023-09-01 03:02:00,531 - client          : Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/Users/devgopal/Desktop/Music Bot/music_cogs.py", line 17, in on_ready
+    await bot.load_extension("cogs.music")
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1007, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'cogs.music' is already loaded.
+ERROR      - 2023-09-01 03:03:31,158 - client          : Attempting a reconnect in 2.91s
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/client.py", line 659, in connect
+    await self.ws.poll_event()
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/gateway.py", line 646, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+INFO       - 2023-09-01 03:03:35,955 - gateway         : Shard ID None has successfully RESUMED session 3d643f623a10188a90bf70305b9c8f9c.
+INFO       - 2023-09-01 04:05:10,552 - gateway         : Shard ID None session has been invalidated.
+INFO       - 2023-09-01 04:05:16,962 - gateway         : Shard ID None has connected to Gateway (Session ID: 3c02c988f12a6bc32da9407daa3b4a66).
+ERROR      - 2023-09-01 04:05:19,090 - client          : Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/Users/devgopal/Desktop/Music Bot/music_cogs.py", line 17, in on_ready
+    await bot.load_extension("cogs.music")
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1007, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'cogs.music' is already loaded.
+ERROR      - 2023-09-01 05:32:09,013 - client          : Attempting a reconnect in 0.13s
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1155, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/http.py", line 537, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1169, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known]
+ERROR      - 2023-09-01 05:32:39,166 - client          : Attempting a reconnect in 13.58s
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1155, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/http.py", line 537, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1169, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known]
+ERROR      - 2023-09-01 05:33:22,760 - client          : Attempting a reconnect in 20.82s
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1155, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/http.py", line 537, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1169, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known]
+ERROR      - 2023-09-01 05:34:13,591 - client          : Attempting a reconnect in 18.57s
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1155, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/http.py", line 537, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1169, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known]
+ERROR      - 2023-09-01 05:35:02,173 - client          : Attempting a reconnect in 101.98s
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1155, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/http.py", line 537, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1169, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known]
+ERROR      - 2023-09-01 05:37:14,163 - client          : Attempting a reconnect in 99.66s
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1155, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/http.py", line 537, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1169, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known]
+ERROR      - 2023-09-01 05:54:52,944 - client          : Attempting a reconnect in 300.07s
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1155, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/http.py", line 537, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1169, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known]
+ERROR      - 2023-09-01 07:15:45,747 - client          : Attempting a reconnect in 108.03s
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1155, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/http.py", line 537, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1169, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known]
+ERROR      - 2023-09-01 07:41:45,532 - client          : Attempting a reconnect in 108.07s
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1155, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/http.py", line 537, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1169, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known]
+ERROR      - 2023-09-01 07:44:03,611 - client          : Attempting a reconnect in 486.27s
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1155, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 867, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/http.py", line 537, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/aiohttp/connector.py", line 1169, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known]
+INFO       - 2023-09-01 10:10:29,367 - gateway         : Shard ID None session has been invalidated.
+INFO       - 2023-09-01 10:10:34,995 - gateway         : Shard ID None has connected to Gateway (Session ID: e1f6afa73704eaed184366fdaeadae1e).
+ERROR      - 2023-09-01 10:10:37,011 - client          : Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/Users/devgopal/Desktop/Music Bot/music_cogs.py", line 17, in on_ready
+    await bot.load_extension("cogs.music")
+  File "/Users/devgopal/Desktop/Music Bot/.venv/lib/python3.11/site-packages/discord/ext/commands/bot.py", line 1007, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'cogs.music' is already loaded.
