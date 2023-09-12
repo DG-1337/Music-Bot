@@ -5,7 +5,7 @@ server: # REST and WS server
   address: 0.0.0.0
 lavalink:
   server:
-    password: "adsfjklajk2345jkl3498fdaslsdnnvmxvuisdfltu47539480tlkesfjasdjfg83945khjfgdfkfsdgdrsfugkrjutwer798345"
+    password: "Change_Me"
     sources:
       youtube: true
       bandcamp: true
