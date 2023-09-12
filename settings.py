@@ -8,7 +8,7 @@ import discord
 load_dotenv()
 
 DISCORD_API_SECRET = os.getenv("BOT_TOKEN")
-LAVA_LINK_PASSWORD = os.getenv("PASSWORD")
+LAVA_LINK_PASSWORD = os.getenv("LAVA_LINK_PASSWORD")
 
 BASE_DIR = pathlib.Path(__file__).parent
 

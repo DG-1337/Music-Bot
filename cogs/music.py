@@ -32,6 +32,7 @@ class MusicBot(commands.Cog):
     async def on_wavelink_track_end(self, payload:wavelink.TrackEventPayload):
         await self.play_next_track()
 
+    # if user isn't in channel then bot will not join the vc
     @commands.hybrid_command(brief="Joins user's voice channel")
     async def join(self, ctx):
         try:
@@ -106,14 +107,14 @@ class MusicBot(commands.Cog):
             await vc.stop()
             next_track = self.queue.pop()
             await vc.play(next_track)
-            ctx.send(f"Current song has been skipped")
+            await ctx.send(f"Current track has been skipped")
 
         elif self.vc.is_playing() == True:
             await vc.stop()
-            await ctx.send(f"Stopped current song")
+            await ctx.send(f"Stopped current tracl")
 
         else:
-            ctx.send("No song is currently playing")
+            await ctx.send("No track(s) is currently playing")
 
     async def button(self, ctx):
         view = SimpleView(timeout=50)
