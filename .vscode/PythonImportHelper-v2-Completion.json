@@ -1,0 +1,346 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "discord",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "discord",
+        "description": "discord",
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "Embed",
+        "importPath": "discord",
+        "description": "discord",
+        "isExtraImport": true,
+        "detail": "discord",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleView",
+        "importPath": "buttons",
+        "description": "buttons",
+        "isExtraImport": true,
+        "detail": "buttons",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "settings",
+        "description": "settings",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "commands",
+        "importPath": "discord.ext",
+        "description": "discord.ext",
+        "isExtraImport": true,
+        "detail": "discord.ext",
+        "documentation": {}
+    },
+    {
+        "label": "commands",
+        "importPath": "discord.ext",
+        "description": "discord.ext",
+        "isExtraImport": true,
+        "detail": "discord.ext",
+        "documentation": {}
+    },
+    {
+        "label": "commands",
+        "importPath": "discord.ext",
+        "description": "discord.ext",
+        "isExtraImport": true,
+        "detail": "discord.ext",
+        "documentation": {}
+    },
+    {
+        "label": "wavelink",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "wavelink",
+        "description": "wavelink",
+        "detail": "wavelink",
+        "documentation": {}
+    },
+    {
+        "label": "utils",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "utils",
+        "description": "utils",
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "pathlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "dictConfig",
+        "importPath": "logging.config",
+        "description": "logging.config",
+        "isExtraImport": true,
+        "detail": "logging.config",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.11/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.11/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.11/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.11/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.11/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "MusicBot",
+        "kind": 6,
+        "importPath": "cogs.music",
+        "description": "cogs.music",
+        "peekOfCode": "class MusicBot(commands.Cog):\n    def __init__(self, bot):\n        self.bot = bot\n        self.queue = wavelink.Queue()\n        self.vc : wavelink.Player = None\n        self.node: wavelink.Node = None\n        self.track: wavelink.YouTubeTrack = None\n        self.playlist: wavelink.YouTubePlaylist = None\n    # used to connect to lavalink\n    async def setup(self):",
+        "detail": "cogs.music",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "cogs.music",
+        "description": "cogs.music",
+        "peekOfCode": "logger = settings.logging.getLogger(__name__)\n# commands for music bot \nclass MusicBot(commands.Cog):\n    def __init__(self, bot):\n        self.bot = bot\n        self.queue = wavelink.Queue()\n        self.vc : wavelink.Player = None\n        self.node: wavelink.Node = None\n        self.track: wavelink.YouTubeTrack = None\n        self.playlist: wavelink.YouTubePlaylist = None",
+        "detail": "cogs.music",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleView",
+        "kind": 6,
+        "importPath": "buttons",
+        "description": "buttons",
+        "peekOfCode": "class SimpleView(discord.ui.View):\n    foo : bool = None\n    async def disable_all_items(self):\n        for item in self.children:\n            item.disabled = True\n        await self.message.edit(view=self)\n    async def on_timeout(self) -> None:\n        await self.message.channel.send(\"Timedout\")\n        await self.disable_all_items()\n    @discord.ui.button(label=\"⏯\", ",
+        "detail": "buttons",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "buttons",
+        "description": "buttons",
+        "peekOfCode": "logger = settings.logging.getLogger(\"bot\")\nclass SimpleView(discord.ui.View):\n    foo : bool = None\n    async def disable_all_items(self):\n        for item in self.children:\n            item.disabled = True\n        await self.message.edit(view=self)\n    async def on_timeout(self) -> None:\n        await self.message.channel.send(\"Timedout\")\n        await self.disable_all_items()",
+        "detail": "buttons",
+        "documentation": {}
+    },
+    {
+        "label": "run",
+        "kind": 2,
+        "importPath": "music_cogs",
+        "description": "music_cogs",
+        "peekOfCode": "def run():\n    intents = discord.Intents.all()\n    bot = commands.Bot(command_prefix=\"!\", intents=intents)\n    # sync slash commands\n    @bot.event \n    async def on_ready():\n        await utils.load_videocmds(bot)\n        await bot.load_extension(\"cogs.music\")\n        synced = await bot.tree.sync()\n        logger.info(f\"Synced {len(synced)}, command(s)\")",
+        "detail": "music_cogs",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "music_cogs",
+        "description": "music_cogs",
+        "peekOfCode": "logger = settings.logging.getLogger(\"bot\")\ndef run():\n    intents = discord.Intents.all()\n    bot = commands.Bot(command_prefix=\"!\", intents=intents)\n    # sync slash commands\n    @bot.event \n    async def on_ready():\n        await utils.load_videocmds(bot)\n        await bot.load_extension(\"cogs.music\")\n        synced = await bot.tree.sync()",
+        "detail": "music_cogs",
+        "documentation": {}
+    },
+    {
+        "label": "DISCORD_API_SECRET",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "DISCORD_API_SECRET = os.getenv(\"BOT_TOKEN\")\nLAVA_LINK_PASSWORD = os.getenv(\"LAVA_LINK_PASSWORD\")\nBASE_DIR = pathlib.Path(__file__).parent\nCMDS_DIR = BASE_DIR / \"cmds\"\nCOGS_DIR = BASE_DIR / \"cogs\"\nVIDEOCMDS_DIR = BASE_DIR / \"videocmds\"\nLOGGING_CONFIG = {\n    \"version\": 1,\n    \"disabled_existing_loggers\": False,\n    \"formatters\": {",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "LAVA_LINK_PASSWORD",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "LAVA_LINK_PASSWORD = os.getenv(\"LAVA_LINK_PASSWORD\")\nBASE_DIR = pathlib.Path(__file__).parent\nCMDS_DIR = BASE_DIR / \"cmds\"\nCOGS_DIR = BASE_DIR / \"cogs\"\nVIDEOCMDS_DIR = BASE_DIR / \"videocmds\"\nLOGGING_CONFIG = {\n    \"version\": 1,\n    \"disabled_existing_loggers\": False,\n    \"formatters\": {\n        \"verbose\": {",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "BASE_DIR = pathlib.Path(__file__).parent\nCMDS_DIR = BASE_DIR / \"cmds\"\nCOGS_DIR = BASE_DIR / \"cogs\"\nVIDEOCMDS_DIR = BASE_DIR / \"videocmds\"\nLOGGING_CONFIG = {\n    \"version\": 1,\n    \"disabled_existing_loggers\": False,\n    \"formatters\": {\n        \"verbose\": {\n            \"format\": \"%(levelname)-10s - %(asctime)s - %(module)-15s : %(message)s\"",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "CMDS_DIR",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "CMDS_DIR = BASE_DIR / \"cmds\"\nCOGS_DIR = BASE_DIR / \"cogs\"\nVIDEOCMDS_DIR = BASE_DIR / \"videocmds\"\nLOGGING_CONFIG = {\n    \"version\": 1,\n    \"disabled_existing_loggers\": False,\n    \"formatters\": {\n        \"verbose\": {\n            \"format\": \"%(levelname)-10s - %(asctime)s - %(module)-15s : %(message)s\"\n        },",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "COGS_DIR",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "COGS_DIR = BASE_DIR / \"cogs\"\nVIDEOCMDS_DIR = BASE_DIR / \"videocmds\"\nLOGGING_CONFIG = {\n    \"version\": 1,\n    \"disabled_existing_loggers\": False,\n    \"formatters\": {\n        \"verbose\": {\n            \"format\": \"%(levelname)-10s - %(asctime)s - %(module)-15s : %(message)s\"\n        },\n        \"standard\": {\"format\": \"%(levelname)-10s - %(name)-15s : %(message)s\"},",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "VIDEOCMDS_DIR",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "VIDEOCMDS_DIR = BASE_DIR / \"videocmds\"\nLOGGING_CONFIG = {\n    \"version\": 1,\n    \"disabled_existing_loggers\": False,\n    \"formatters\": {\n        \"verbose\": {\n            \"format\": \"%(levelname)-10s - %(asctime)s - %(module)-15s : %(message)s\"\n        },\n        \"standard\": {\"format\": \"%(levelname)-10s - %(name)-15s : %(message)s\"},\n    },",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGGING_CONFIG",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "LOGGING_CONFIG = {\n    \"version\": 1,\n    \"disabled_existing_loggers\": False,\n    \"formatters\": {\n        \"verbose\": {\n            \"format\": \"%(levelname)-10s - %(asctime)s - %(module)-15s : %(message)s\"\n        },\n        \"standard\": {\"format\": \"%(levelname)-10s - %(name)-15s : %(message)s\"},\n    },\n    \"handlers\": {",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "utils",
+        "description": "utils",
+        "peekOfCode": "logger = settings.logging.getLogger(__name__)\nasync def load_videocmds(bot):\n    logger.info(f\"User: {bot.user} (ID: {bot.user.id})\")\n    for extension_file in settings.VIDEOCMDS_DIR.glob(\"*.py\"):\n        if extension_file.name != \"__init__.py\" and not extension_file.name.startswith(\"_\"):\n            await bot.load_extension(f\"{settings.VIDEOCMDS_DIR.name}.{extension_file.name[:-3]}\")\n            logger.debug(f\"Loadded CMD: {extension_file.name}\")",
+        "detail": "utils",
+        "documentation": {}
+    }
+]

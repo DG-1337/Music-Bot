@@ -6,6 +6,7 @@ from discord import Embed
 from discord.ext import commands 
 import wavelink
 
+
 logger = settings.logging.getLogger(__name__)
 
 
@@ -18,6 +19,7 @@ class MusicBot(commands.Cog):
         self.vc : wavelink.Player = None
         self.node: wavelink.Node = None
         self.track: wavelink.YouTubeTrack = None
+        self.playlist: wavelink.YouTubePlaylist = None
       
     # used to connect to lavalink
     async def setup(self):
@@ -49,23 +51,20 @@ class MusicBot(commands.Cog):
 
     @commands.hybrid_command(name="play", brief="Plays songs from YouTube")
     async def play(self, ctx: commands.Context, *, search: str) -> None:
-        
-        if not ctx.voice_client:
-            await ctx.invoke(self.bot.get_command('join'))
-
-        else:
-            self.vc = ctx.voice_client
-
+        await ctx.invoke(self.bot.get_command('join'))
         self.track = await wavelink.YouTubeTrack.search(search, return_first=True)
-
-
+        
         if not self.track:
             return await ctx.send(f'Could not find: `{search}`')
         
         self.queue.put(self.track)
         self.music_channel = ctx.message.channel 
         if not self.vc.is_playing():
-            await self.play_next_track()
+            try:
+                await self.play_next_track()
+            except AttributeError as e:
+                if str(e) == """'YouTubePlaylist' object has no attribute 'encoded'""":
+                    await self.add_playlist()
 
         else:
             await ctx.send(f"`{self.track}` has been added to the queue")
@@ -79,8 +78,17 @@ class MusicBot(commands.Cog):
             embed = discord.Embed(title=f"`{self.track}` by `{self.track.author}`")
             embed.set_image(url=video_url)
             await self.music_channel.send(embed=embed)
-          
 
+    async def add_playlist(self, search):
+        self.playlist = await wavelink.YouTubePlaylist.search(search, return_first=True)
+        if not self.track:
+            return await self.music_channel.send(f'Could not find: `{search}`')
+        
+        self.queue.put(self.track)
+        self.music_channel = self.music_channel.message.channel 
+        if not self.vc.is_playing():
+            await self.play_next_track
+        
     @commands.hybrid_command(name="pause", brief="Stops current track")
     async def pause(self, ctx):
         if self.vc.is_playing == False:
